@@ -2,7 +2,7 @@
   "name": "bundle-up2",
   "author": "Francois-Guillaume Ribreau <npm@fgribreau.com> (http://fgribreau.com)",
   "description": "A simple asset manager middleware for connect",
-  "version": "0.4.5",
+  "version": "1.0.0",
   "repository": {
     "url": ""
   },
