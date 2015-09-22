@@ -42,12 +42,9 @@ class BundleUp
 
     if(@app.locals)
       # Support for Express 3
-      @app.locals(
-        renderStyles: (namespace=@css.defaultNamespace) =>
-          return @css.render(namespace)
-        renderJs: (namespace=@js.defaultNamespace) =>
-          return @js.render(namespace)
-      )
+      @app.locals.renderStyles= (namespace=@css.defaultNamespace) => return @css.render(namespace)
+      @app.locals.renderJs = (namespace=@js.defaultNamespace) => return @js.render(namespace)
+
 
     else if(@app.dynamicHelpers)
       # Support for Express 2
