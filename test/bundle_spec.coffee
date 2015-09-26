@@ -9,7 +9,7 @@ express = require 'express'
 describe 'bundle:true', ->
   beforeEach ->
     helper.beforeEach()
-    @app = express.createServer()
+    @app = express()
     @bundle = BundleUp @app, __dirname + "/files/assets.coffee",
       staticRoot: __dirname + "/files/public/",
       staticUrlRoot:"/",

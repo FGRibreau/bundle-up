@@ -9,7 +9,7 @@ request = require 'request'
 
 describe 'View Helper', ->
   beforeEach ->
-    @app = express.createServer()
+    @app = express()
     @app.set('views', __dirname + '/views')
     @bundle = BundleUp @app, __dirname + '/files/assets_namespaced.coffee',
       staticRoot: __dirname + '/files/public/',
@@ -34,10 +34,10 @@ describe 'View Helper', ->
     @app.get '/print_namespaceCss', (req, res) ->
       res.render 'printCss.jade', layout:false
 
-    @app.listen(1338)
+    @server =@app.listen(1338)
 
   afterEach ->
-    @app.close()
+    @server.close()
 
   describe 'renderJs', ->
     it 'should render the global.js bundle', (done) ->

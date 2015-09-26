@@ -12,17 +12,17 @@ describe 'OnTheFlyCompiler', ->
   bundle = {}
   beforeEach ->
     helper.beforeEach()
-    @app = express.createServer()
+    @app = express()
     bundle = BundleUp @app, __dirname + '/files/assets.coffee',
       staticRoot: __dirname + '/files/public/',
       staticUrlRoot:"/",
       bundle:false
     @app.use(express.static(__dirname + '/files/public/'))
 
-    @app.listen(1338)
+    @server =@app.listen(1338)
 
   afterEach ->
-    @app.close()
+    @server.close()
 
   it 'should compile stylus files correctly', (done) ->
     request.get 'http://localhost:1338/min/stylus/main.css', (err, res) ->

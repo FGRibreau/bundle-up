@@ -43,7 +43,7 @@ describe 'Namespaces', ->
 
   describe 'bundle:true', ->
     beforeEach ->
-      @app = express.createServer()
+      @app = express()
       @bundle = BundleUp @app, __dirname + '/files/assets_namespaced.coffee',
         staticRoot: __dirname + '/files/public/',
         staticUrlRoot:'/',
