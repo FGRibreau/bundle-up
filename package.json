@@ -8,7 +8,7 @@
   },
   "main": "index.js",
   "engines": {
-    "node": ">= 0.6.x < 0.9.0"
+    "node": "0.12.7"
   },
   "contributors": [
     "Fredrik Lindin <fredriklindin@gmail.com>"
@@ -20,6 +20,7 @@
     "async": "~0.1.15",
     "clean-css": "~0.8.2",
     "coffee-script": "~1.4.0",
+    "debug": "^2.2.0",
     "lodash": "0.9.x",
     "mkdirp": "~0.3.4",
     "mocha": "^2.3.3",
