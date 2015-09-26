@@ -1,3 +1,4 @@
+debug = require('debug')('bundle-up2')
 AssetsManager    = require './assets_manager'
 _                = require 'lodash'
 Js               = require './js'

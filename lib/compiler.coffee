@@ -1,6 +1,8 @@
+debug = require('debug')('bundle-up2')
 fs = require 'fs'
 
 exports.compile = compile = (compilers, content, file, cb) ->
+  debug('compile file=%s', file)
   fileExt = file.split('.')
   fileExt = fileExt[fileExt.length - 1]
 
